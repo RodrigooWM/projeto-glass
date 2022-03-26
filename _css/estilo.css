@@ -21,7 +21,7 @@ p {text-indent: 50px; text-align: justify;
 }
 
 a {
-    color:#808080;
+    color:#6495ed;
     text-decoration:none;
 }
 
@@ -71,7 +71,7 @@ figure.foto-legenda{
     width: 450px;
     float: left;
 }
-figure.foto-legenda img{
+figure.foto-legenda img  {
     position: absolute;
     right: 0px;
     height: 346px;
@@ -83,7 +83,7 @@ figure.foto-legenda figcaption{
     position: absolute;
     right: 0px;
     top: 0px;
-    background-color: rgba(0,0,0,0.4);
+
     color: white;
     height: 346px;
     padding: 0px;
@@ -91,6 +91,7 @@ figure.foto-legenda figcaption{
     transition: opacity 2s;
     width: 450px;
     float: left;
+    background-color: rgba(0,0,0,0.4);
 }
 figure.foto-legenda:hover figcaption{
     opacity: 100%;
