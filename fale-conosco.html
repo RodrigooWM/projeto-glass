@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <html leng="pt-br">
 <head>
 
@@ -36,7 +36,7 @@
         </nav>
     </header>
 
-        <form>
+        <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com">
             <fieldset id="user">
                 <legend>
 
@@ -64,22 +64,49 @@
                         Endereço do usuário
                         <p><label for="cRua"> Rua: </label><input type="text" name="tRua" id="cRua" size="15" maxlength="30" placeholder="Rua, Av, Tv, etc."> </p>
                         <p><label for="cNum"> Número: </label><input type="number" name="tNum" id="cNum" min="0" max="9999" placeholder="Número e complemento"> </p>
-                        <p><label for=" ">Estado:</label></p>
-                        <p><label for=" ">Cidade:</label></p>
+                        <p>
+                           <label for="cEst">Estado:</label>
+                            <select name="tEst" id="cEst"> </p>
+                                <option value="RJ"> Rio de Janeiro</option>
+                                <option value="SP"> São Paulo</option>
+                                <option value="CE"> Ceará</option>
+                                <option value="SC"> Santa Catarina</option>
+                                <option value="AM"> Amazonas</option>
+                                <option value="AC"> Acre</option>
+                                <option value="RS"> Rio Grande do Sul</option>
+                            </select>
+                    <p><label for="cCid">Cidade: </label>
+                        <input type="text" name="tCid" id="cCid" maxlength="20" size="20" placeholder="Digite a Cidade" list="cidades"> </p>
+                          <datalist id="cidades">
+                            <option>Rio de Janeiro </option>
+                            <option> São Paulo</option>
+                            <option> Fortaleza</option>
+                            <option> Florianópolis</option>
+                            <option> Manaus</option>
+                            <option> Rio Branco</option>
+                            <option> Porto alegre</option>
+                          </datalist>
+
+
 
                 </legend>
             </fieldset>
-            <fieldset id="request">
+            <fieldset id="mensagem">
                 <legend>
-
                         Mensagem do usuário
-                    <p><label>Grau de Urgência:</label></p>
-                    <p><label>Mensagem:</label></p>
+                </legend>
+                    <p><label for="cUrg">Grau de Urgência: </label>
+                    Min<input type="range" name="tUrg" id="cUrg" min="0" max="10">Max
+                    </p>
+                    <p><label>Mensagem:</label>
+                    <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Observações sobre a entrega"></textarea>
+                    </p>
                         Quero um Google Glass
                         Gostaria de adquirir um Google GLass quando disponível
                     <p><label>Cor:</label></p>
-                    <p><label>Quantidade:</label></p>
-                    <p><label>Preço total: R$</label></p>
+                    <p><label for="cQtd">Quantidade: </label> <input type="number" name="tQtd" id="cQtd" min="0"> </p>
+                    <p>Preço total: R$ </p>
+
 
                 </legend>
             </fieldset>
