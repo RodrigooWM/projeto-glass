@@ -1,0 +1,5 @@
+git init
+git status (para ver o que foi modificado)
+git add .
+git commit -m "(comentário sobre a mudança)"
+git push main
